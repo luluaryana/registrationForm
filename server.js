@@ -18,9 +18,9 @@ app.use(session({
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'demo',
-    password: 'demo1234',
-    database: 'portfolio_db',
+    user: 'aryana',
+    password: 'arya1234',
+    database: 'caffe_db',
 });
 
 db.connect((err) => {
@@ -33,7 +33,7 @@ db.connect((err) => {
 
 // Serve the HTML file
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/public/signin.html');
 });
 
 app.post('/register', (req, res) => {
@@ -63,7 +63,7 @@ app.post('/register', (req, res) => {
 
             console.log('User registered successfully');
             // redirect to homepage
-            res.sendFile(__dirname + '/public/index.html');
+            res.sendFile(__dirname + '/public/sign.html');
         });
     });
 });
@@ -89,16 +89,11 @@ app.post('/login', (req, res) => {
 
         const user = results[0];
 
-        // Compare the entered password with the hashed password from the database
         if (bcrypt.compareSync(password, user.password)) {
-            // Authentication successful
-            // Set user data in the session for future authentication
             req.session.user = { id: user.id, username: user.username };
 
-            // Redirect to homepage.html after successful login
-            res.sendFile(__dirname + '/public/homepage.html');
+            res.sendFile(__dirname + '/public/index.html');
         } else {
-            // Passwords do not match
             res.status(401).json({ message: 'Invalid username or password' });
         }
     });
