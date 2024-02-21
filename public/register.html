@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ary website</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <section>
+       <div class="imageBox">
+           <img src="coffee3.jpg" alt="coffee">
+       </div>
+       <div class="contentBox">
+           <div class="formBox">
+               <h2>Create Account</h2>
+               <form action="/register" method="post" id="signUpForm" >
+                    <div class="inputBox">
+                        <span>Firstname</span>
+                        <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Lastname</span>
+                        <input type="text" id="lastname" name="lastname" placeholder="Lastname">
+                    </div>
+
+                   <div class="inputBox">
+                       <span>Username</span>
+                       <input type="text" id="signUp_username" name="username" placeholder="Enter Username">
+                    </div>
+
+                   <div class="inputBox">
+                       <span>Password</span>
+                       <input type="password" id="signUp_password" name="password" placeholder="Enter Password">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Confirm password</span>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+                    </div>
+
+                   <div class="remember">
+                       <label for="#"><input type="checkbox" name=""> Remember me </label>
+                   </div>
+
+                   <div class="inputBox">
+                       <input type="submit" value="Sign Up" name="">
+                   </div>
+
+                   <div class="inputBox">
+                       <p>Don't have an account? <a href="signin.html"> Sign In </a></p>
+                   </div>
+               </form>
+           </div>
+
+       </div>
+   </section>
+</body>
+</html>

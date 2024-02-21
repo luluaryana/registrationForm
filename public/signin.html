@@ -14,15 +14,15 @@
         <div class="contentBox">
             <div class="formBox">
                 <h2>Login</h2>
-                <form action="#">
+                <form action="/login" method="post" id="signInForm" >
                     <div class="inputBox">
                         <span>Username</span>
-                        <input type="text" name="">
+                        <input type="text" id="signIn_username" name="username">
                     </div>
 
                     <div class="inputBox">
                         <span>Password</span>
-                        <input type="pasword" name="">
+                        <input type="pasword" id="signIn_password" name="password">
                     </div>
 
                     <div class="remember">
@@ -30,11 +30,11 @@
                     </div>
 
                     <div class="inputBox">
-                        <input type="submit" value="Sign in" name="">
+                        <input type="submit" value="Sign In" name="">
                     </div>
 
                     <div class="inputBox">
-                        <p>Don't have an account? <a href="#"> Sign up </a></p>
+                        <p>Don't have an account? <a href="register.html"> Sign up </a></p>
                     </div>
                 </form>
             </div>
